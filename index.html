@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Event Registration</h1>
+    <p class="subtitle">Fill in your details to register for an event.</p>
+
+    <form id="registrationForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="event">Event</label>
+      <select id="event" name="event" required>
+        <option value="">Select an event</option>
+        <option value="Web Development Workshop">Web Development Workshop</option>
+        <option value="AI & Machine Learning Seminar">AI & Machine Learning Seminar</option>
+        <option value="Coding Competition">Coding Competition</option>
+        <option value="Tech Fest">Tech Fest</option>
+      </select>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+
+    <section id="details" class="details" aria-live="polite" hidden>
+      <h2>Registration Details</h2>
+      <p><strong>Name:</strong> <span id="displayName"></span></p>
+      <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+      <p><strong>Event:</strong> <span id="displayEvent"></span></p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
